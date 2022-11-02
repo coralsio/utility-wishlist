@@ -1,0 +1,13 @@
+{
+    "code": "corals-utility-wishlist",
+    "name": "Utility Wishlists",
+    "author": "Corals",
+    "type": "module",
+    "description": "Utility Wishlists",
+    "namespace": "Corals\\Modules\\Utility\\Wishlist",
+    "provider": "UtilityWishlistServiceProvider",
+    "version": "1.0",
+    "load_order": "0",
+    "folder": "utility-wishlist",
+    "icon": "fa fa-list"
+}
