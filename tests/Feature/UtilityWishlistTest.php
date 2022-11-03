@@ -67,7 +67,6 @@ class UtilityWishlistTest extends TestCase
         $this->assertTrue(true);
     }
 
-
     public function test_utility_wishlist_Ecommerce_delete($class = null, $prefix = null, $className = null)
     {
         if ($class == 'Ecommerce' && $this->wishlistEcommerce) {
