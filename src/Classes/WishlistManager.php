@@ -2,14 +2,13 @@
 
 namespace Corals\Modules\Utility\Wishlist\Classes;
 
-
-use Illuminate\Database\Eloquent\Model;
 use Corals\Modules\Utility\Wishlist\Models\Wishlist as WishlistModel;
+use Illuminate\Database\Eloquent\Model;
 
 class WishlistManager
 {
-
-    protected $instance, $user;
+    protected $instance;
+    protected $user;
 
     /**
      * WishlistManager constructor.

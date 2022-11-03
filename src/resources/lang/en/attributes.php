@@ -2,6 +2,6 @@
 
 return [
     'wishlist' => [
-        'object' => 'Object'
+        'object' => 'Object',
     ],
 ];

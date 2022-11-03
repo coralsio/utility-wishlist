@@ -55,7 +55,6 @@ class WishlistBaseController extends BaseController
         }
     }
 
-
     /**
      * @param Request $request
      * @param Wishlist $wishlist

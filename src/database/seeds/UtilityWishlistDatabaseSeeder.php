@@ -2,7 +2,6 @@
 
 namespace Corals\Modules\Utility\Wishlist\database\seeds;
 
-use Corals\User\Communication\Models\NotificationTemplate;
 use Corals\User\Models\Permission;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +21,5 @@ class UtilityWishlistDatabaseSeeder extends Seeder
     {
         Permission::where('name', 'like', 'Utility::wishlist%')->delete();
         Permission::where('name', 'Administrations::admin.utility_wishlist')->delete();
-
     }
 }

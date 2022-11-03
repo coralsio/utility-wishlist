@@ -10,9 +10,7 @@ trait Wishlistable
     public static function bootWishlistable()
     {
         static::deleted(function (Model $deletedModel) {
-
             $deletedModel->wishlists()->delete();
-
         });
     }
 
