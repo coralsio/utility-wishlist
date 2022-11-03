@@ -2,14 +2,12 @@
 
 namespace Corals\Modules\Utility\Wishlist\database\migrations;
 
-
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateWishlistsTable extends Migration
 {
-
     public function up()
     {
         Schema::create('utility_wishlists', function (Blueprint $table) {

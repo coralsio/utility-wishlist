@@ -26,7 +26,7 @@ class WishlistTransformer extends BaseTransformer
             'id' => $wishlist->id,
             'user_id' => $wishlist->user->full_name,
             'created_at' => format_date($wishlist->created_at),
-            'action' => $this->actions($wishlist)
+            'action' => $this->actions($wishlist),
         ];
 
         return parent::transformResponse($transformedArray);

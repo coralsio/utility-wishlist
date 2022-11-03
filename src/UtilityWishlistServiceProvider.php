@@ -2,12 +2,11 @@
 
 namespace Corals\Modules\Utility\Wishlist;
 
-use Corals\Modules\Utility\Wishlist\Providers\UtilityAuthServiceProvider;
-use Corals\Modules\Utility\Wishlist\Providers\UtilityRouteServiceProvider;
 use Corals\Modules\Utility\Wishlist\Classes\WishlistManager;
 use Corals\Modules\Utility\Wishlist\Models\Wishlist;
+use Corals\Modules\Utility\Wishlist\Providers\UtilityAuthServiceProvider;
+use Corals\Modules\Utility\Wishlist\Providers\UtilityRouteServiceProvider;
 use Corals\Settings\Facades\Modules;
-use Corals\User\Communication\Facades\CoralsNotification;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
@@ -30,7 +29,6 @@ class UtilityWishlistServiceProvider extends ServiceProvider
 
         $this->registerMorphMaps();
         $this->registerModulesPackages();
-
     }
 
     public function register()

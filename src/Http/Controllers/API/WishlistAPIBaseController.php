@@ -39,7 +39,6 @@ class WishlistAPIBaseController extends APIBaseController
         }
     }
 
-
     /**
      * @param Request $request
      * @param WishlistDataTable $dataTable

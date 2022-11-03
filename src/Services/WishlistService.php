@@ -2,13 +2,11 @@
 
 namespace Corals\Modules\Utility\Wishlist\Services;
 
-
 use Corals\Foundation\Services\BaseServiceClass;
 use Corals\Modules\Utility\Wishlist\Classes\WishlistManager;
 
 class WishlistService extends BaseServiceClass
 {
-
     /**
      * @param $wishlistable_hashed_id
      * @param $wishlistableClass
@@ -24,11 +22,11 @@ class WishlistService extends BaseServiceClass
 
         $wishlistable = $wishlistableClass::findByHash($wishlistable_hashed_id);
 
-        if (!$wishlistable) {
+        if (! $wishlistable) {
             abort(404, 'Not Found!!');
         }
 
-        if (!user()) {
+        if (! user()) {
             throw new \Exception(trans($requireLoginMessage, ['item' => class_basename($wishlistableClass)]));
         }
 

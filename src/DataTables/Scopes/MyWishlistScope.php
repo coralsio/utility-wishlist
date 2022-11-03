@@ -2,7 +2,6 @@
 
 namespace Corals\Modules\Utility\Wishlist\DataTables\Scopes;
 
-
 use Yajra\DataTables\Contracts\DataTableScope;
 
 class MyWishlistScope implements DataTableScope

@@ -6,7 +6,6 @@ use Corals\Foundation\Transformers\FractalPresenter;
 
 class WishlistPresenter extends FractalPresenter
 {
-
     /**
      * @return WishlistTransformer|\League\Fractal\TransformerAbstract
      */

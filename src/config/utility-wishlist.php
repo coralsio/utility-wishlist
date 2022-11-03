@@ -5,8 +5,8 @@ return [
         'wishlist' => [
             'resource_url' => 'utilities/wishlist',
             'actions' => [
-                'edit' => []
-            ]
+                'edit' => [],
+            ],
         ],
         ],
     ];

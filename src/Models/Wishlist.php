@@ -23,8 +23,9 @@ class Wishlist extends BaseModel
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     protected $casts = [
-        'properties' => 'json'
+        'properties' => 'json',
     ];
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
