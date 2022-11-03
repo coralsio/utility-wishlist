@@ -13,6 +13,7 @@ class UtilityWishlistTest extends TestCase
 {
     use DatabaseTransactions;
 
+    protected $wishlistEcommerce = [];
     protected $wishlist = [];
 
     protected function setUp(): void
@@ -53,7 +54,7 @@ class UtilityWishlistTest extends TestCase
                             $response->assertStatus(200)->assertSeeText($className . ' has been added to wishlist successfully');
 
                             if ($module == 'Ecommerce') {
-                                $this->wishlist = Wishlist::query()->where('wishlistable_type', '=', 'Corals\Modules\Ecommerce\Models\\' . $className)->first();
+                                $this->wishlistEcommerce = Wishlist::query()->where('wishlistable_type', '=', 'Corals\Modules\Ecommerce\Models\\' . $className)->first();
                                 $this->test_utility_wishlist_delete('Ecommerce', $array['prefix'], $className);
                             }
                         }
@@ -61,16 +62,28 @@ class UtilityWishlistTest extends TestCase
                 }
             }
         }
+        $this->wishlist = Wishlist::query()->first();
+
         $this->assertTrue(true);
     }
 
 
-    public function test_utility_wishlist_delete($class = null, $prefix = null, $className = null)
+    public function test_utility_wishlist_Ecommerce_delete($class = null, $prefix = null, $className = null)
     {
-        if ($class == 'Ecommerce' && $this->wishlist) {
-            $response = $this->delete($prefix . '/' . $this->wishlist->hashed_id);
+        if ($class == 'Ecommerce' && $this->wishlistEcommerce) {
+            $response = $this->delete($prefix . '/' . $this->wishlistEcommerce->hashed_id);
 
             $response->assertStatus(200)->assertSeeText($className . ' has been removed from wishlist successfully');
+        }
+        $this->assertTrue(true);
+    }
+
+    public function test_utility_wishlist_delete()
+    {
+        if ($this->wishlist) {
+            $response = $this->delete('wishlist/' . $this->wishlist->hashed_id);
+
+            $response->assertStatus(200)->assertSeeText('has been removed from wishlist successfully');
         }
         $this->assertTrue(true);
     }
