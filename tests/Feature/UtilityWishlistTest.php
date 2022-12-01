@@ -52,7 +52,14 @@ class UtilityWishlistTest extends TestCase
                             $className = substr(strrchr($class, "\\"), 1);
 
                             $response->assertStatus(200)->assertSeeText($className . ' has been added to wishlist successfully');
-
+                           
+                            $this->wishlist = Wishlist::query()->first();
+                            
+                            $this->assertDatabaseHas('utility_wishlists', [
+                                'user_id' => $this->wishlist->user_id,
+                                'wishlistable_id' => $this->wishlist->wishlistable_id,
+                                'wishlistable_type' => $this->wishlist->wishlistable_type,]);
+                            
                             if ($module == 'Ecommerce') {
                                 $this->wishlistEcommerce = Wishlist::query()->where('wishlistable_type', '=', 'Corals\Modules\Ecommerce\Models\\' . $className)->first();
                                 $this->test_utility_wishlist_delete('Ecommerce', $array['prefix'], $className);
@@ -62,7 +69,6 @@ class UtilityWishlistTest extends TestCase
                 }
             }
         }
-        $this->wishlist = Wishlist::query()->first();
 
         $this->assertTrue(true);
     }
@@ -73,16 +79,35 @@ class UtilityWishlistTest extends TestCase
             $response = $this->delete($prefix . '/' . $this->wishlistEcommerce->hashed_id);
 
             $response->assertStatus(200)->assertSeeText($className . ' has been removed from wishlist successfully');
+
+            $this->isSoftDeletableModel(Wishlist::class);
+            $this->assertDatabaseMissing('utility_wishlists', [
+                'user_id' => $this->wishlistEcommerce->user_id,
+                'wishlistable_id' => $this->wishlistEcommerce->wishlistable_id,
+                'wishlistable_type' => $this->wishlistEcommerce->wishlistable_type,]);
         }
         $this->assertTrue(true);
     }
 
     public function test_utility_wishlist_delete()
     {
+        $this->test_utility_wishlist_create();
+
+        $user = User::query()->whereHas('roles', function ($query) {
+            $query->where('name', 'superuser');
+        })->first();
+        Auth::loginUsingId($user->id);
+
         if ($this->wishlist) {
-            $response = $this->delete('wishlist/' . $this->wishlist->hashed_id);
+            $response = $this->delete('utilities/wishlist/' . $this->wishlist->hashed_id);
 
             $response->assertStatus(200)->assertSeeText('has been removed from wishlist successfully');
+
+            $this->isSoftDeletableModel(Wishlist::class);
+            $this->assertDatabaseMissing('utility_wishlists', [
+                'user_id' => $this->wishlist->user_id,
+                'wishlistable_id' => $this->wishlist->wishlistable_id,
+                'wishlistable_type' => $this->wishlist->wishlistable_type,]);
         }
         $this->assertTrue(true);
     }

@@ -16,12 +16,6 @@ class UtilityWishlistPermissionsDatabaseSeeder extends Seeder
     public function run()
     {
         \DB::table('permissions')->insert([
-            [
-                'name' => 'Administrations::admin.utility_wishlist',
-                'guard_name' => config('auth.defaults.guard'),
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-            ],
             //wish lists
             [
                 'name' => 'Utility::my_wishlist.access',

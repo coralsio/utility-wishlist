@@ -20,6 +20,5 @@ class UtilityWishlistDatabaseSeeder extends Seeder
     public function rollback()
     {
         Permission::where('name', 'like', 'Utility::wishlist%')->delete();
-        Permission::where('name', 'Administrations::admin.utility_wishlist')->delete();
     }
 }

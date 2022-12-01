@@ -19,7 +19,7 @@ class WishlistPolicy
      */
     public function before($user, $ability)
     {
-        if ($user->hasPermissionTo('Administrations::admin.utility_wishlist')) {
+        if ($user->hasPermissionTo('Administrations::admin.utility')) {
             return true;
         }
 
