@@ -52,14 +52,14 @@ class UtilityWishlistTest extends TestCase
                             $className = substr(strrchr($class, "\\"), 1);
 
                             $response->assertStatus(200)->assertSeeText($className . ' has been added to wishlist successfully');
-                           
+
                             $this->wishlist = Wishlist::query()->first();
-                            
+
                             $this->assertDatabaseHas('utility_wishlists', [
                                 'user_id' => $this->wishlist->user_id,
                                 'wishlistable_id' => $this->wishlist->wishlistable_id,
                                 'wishlistable_type' => $this->wishlist->wishlistable_type,]);
-                            
+
                             if ($module == 'Ecommerce') {
                                 $this->wishlistEcommerce = Wishlist::query()->where('wishlistable_type', '=', 'Corals\Modules\Ecommerce\Models\\' . $className)->first();
                                 $this->test_utility_wishlist_delete('Ecommerce', $array['prefix'], $className);
