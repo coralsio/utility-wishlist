@@ -2,6 +2,7 @@
 
 namespace Corals\Modules\Utility\Wishlist;
 
+use Corals\Foundation\Providers\BasePackageServiceProvider;
 use Corals\Modules\Utility\Wishlist\Classes\WishlistManager;
 use Corals\Modules\Utility\Wishlist\Models\Wishlist;
 use Corals\Modules\Utility\Wishlist\Providers\UtilityAuthServiceProvider;
@@ -9,11 +10,15 @@ use Corals\Modules\Utility\Wishlist\Providers\UtilityRouteServiceProvider;
 use Corals\Settings\Facades\Modules;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Foundation\AliasLoader;
-use Illuminate\Support\ServiceProvider;
 
-class UtilityWishlistServiceProvider extends ServiceProvider
+class UtilityWishlistServiceProvider extends BasePackageServiceProvider
 {
-    public function boot()
+    /**
+     * @var
+     */
+    protected $packageCode = 'corals-utility-wishlist';
+
+    public function bootPackage()
     {
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'utility-wishlist');
         $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'utility-wishlist');
@@ -28,10 +33,9 @@ class UtilityWishlistServiceProvider extends ServiceProvider
         ]);
 
         $this->registerMorphMaps();
-        $this->registerModulesPackages();
     }
 
-    public function register()
+    public function registerPackage()
     {
         $this->app->register(UtilityAuthServiceProvider::class);
         $this->app->register(UtilityRouteServiceProvider::class);
@@ -49,7 +53,7 @@ class UtilityWishlistServiceProvider extends ServiceProvider
         ]);
     }
 
-    protected function registerModulesPackages()
+    public function registerModulesPackages()
     {
         Modules::addModulesPackages('corals/utility-wishlist');
     }
