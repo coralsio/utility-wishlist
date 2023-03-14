@@ -3,11 +3,11 @@
 namespace Corals\Utility\Wishlist;
 
 use Corals\Foundation\Providers\BasePackageServiceProvider;
+use Corals\Settings\Facades\Modules;
 use Corals\Utility\Wishlist\Classes\WishlistManager;
 use Corals\Utility\Wishlist\Models\Wishlist;
 use Corals\Utility\Wishlist\Providers\UtilityAuthServiceProvider;
 use Corals\Utility\Wishlist\Providers\UtilityRouteServiceProvider;
-use Corals\Settings\Facades\Modules;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Foundation\AliasLoader;
 

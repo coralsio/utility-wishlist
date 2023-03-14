@@ -2,8 +2,8 @@
 
 namespace Corals\Utility\Wishlist\Policies;
 
-use Corals\Utility\Wishlist\Models\Wishlist;
 use Corals\User\Models\User;
+use Corals\Utility\Wishlist\Models\Wishlist;
 
 class WishlistPolicy
 {
