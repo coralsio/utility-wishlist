@@ -1,8 +1,8 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Classes;
+namespace Corals\Utility\Wishlist\Classes;
 
-use Corals\Modules\Utility\Wishlist\Models\Wishlist as WishlistModel;
+use Corals\Utility\Wishlist\Models\Wishlist as WishlistModel;
 use Illuminate\Database\Eloquent\Model;
 
 class WishlistManager

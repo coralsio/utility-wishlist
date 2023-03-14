@@ -1,8 +1,8 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Policies;
+namespace Corals\Utility\Wishlist\Policies;
 
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Models\Wishlist;
 use Corals\User\Models\User;
 
 class WishlistPolicy

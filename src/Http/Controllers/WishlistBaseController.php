@@ -1,11 +1,11 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Http\Controllers;
+namespace Corals\Utility\Wishlist\Http\Controllers;
 
 use Corals\Foundation\Http\Controllers\BaseController;
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
-use Corals\Modules\Utility\Wishlist\Services\WishlistService;
-use Corals\Modules\Utility\Wishlist\Traits\WishlistCommon;
+use Corals\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Services\WishlistService;
+use Corals\Utility\Wishlist\Traits\WishlistCommon;
 use Illuminate\Http\Request;
 
 class WishlistBaseController extends BaseController

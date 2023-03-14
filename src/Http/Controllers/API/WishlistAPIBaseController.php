@@ -1,14 +1,14 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Http\Controllers\API;
+namespace Corals\Utility\Wishlist\Http\Controllers\API;
 
 use Corals\Foundation\Http\Controllers\APIBaseController;
-use Corals\Modules\Utility\Wishlist\DataTables\Scopes\MyWishlistScope;
-use Corals\Modules\Utility\Wishlist\DataTables\Scopes\WishlistTypeScope;
-use Corals\Modules\Utility\Wishlist\DataTables\WishlistDataTable;
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
-use Corals\Modules\Utility\Wishlist\Services\WishlistService;
-use Corals\Modules\Utility\Wishlist\Traits\WishlistCommon;
+use Corals\Utility\Wishlist\DataTables\Scopes\MyWishlistScope;
+use Corals\Utility\Wishlist\DataTables\Scopes\WishlistTypeScope;
+use Corals\Utility\Wishlist\DataTables\WishlistDataTable;
+use Corals\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Services\WishlistService;
+use Corals\Utility\Wishlist\Traits\WishlistCommon;
 use Illuminate\Http\Request;
 
 class WishlistAPIBaseController extends APIBaseController

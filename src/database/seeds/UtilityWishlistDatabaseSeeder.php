@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\database\seeds;
+namespace Corals\Utility\Wishlist\database\seeds;
 
 use Corals\User\Models\Permission;
 use Illuminate\Database\Seeder;

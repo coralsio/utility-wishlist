@@ -4,7 +4,7 @@
     "author": "Corals",
     "type": "module",
     "description": "Utility Wishlists",
-    "namespace": "Corals\\Modules\\Utility\\Wishlist",
+    "namespace": "Corals\\Utility\\Wishlist",
     "provider": "UtilityWishlistServiceProvider",
     "version": "1.0",
     "load_order": "0",

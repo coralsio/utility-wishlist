@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Providers;
+namespace Corals\Utility\Wishlist\Providers;
 
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
-use Corals\Modules\Utility\Wishlist\Policies\WishlistPolicy;
+use Corals\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Policies\WishlistPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class UtilityAuthServiceProvider extends ServiceProvider

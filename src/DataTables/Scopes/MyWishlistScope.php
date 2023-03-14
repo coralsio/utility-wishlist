@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\DataTables\Scopes;
+namespace Corals\Utility\Wishlist\DataTables\Scopes;
 
 use Yajra\DataTables\Contracts\DataTableScope;
 

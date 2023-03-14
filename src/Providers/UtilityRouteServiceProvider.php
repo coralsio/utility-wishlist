@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Providers;
+namespace Corals\Utility\Wishlist\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +14,7 @@ class UtilityRouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Corals\Modules\Utility\Wishlist\Http\Controllers';
+    protected $namespace = 'Corals\Utility\Wishlist\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

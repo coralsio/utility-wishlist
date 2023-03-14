@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Transformers;
+namespace Corals\Utility\Wishlist\Transformers;
 
 use Corals\Foundation\Transformers\BaseTransformer;
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Models\Wishlist;
 
 class WishlistTransformer extends BaseTransformer
 {

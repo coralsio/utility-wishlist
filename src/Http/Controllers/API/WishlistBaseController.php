@@ -1,10 +1,10 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Http\Controllers\API;
+namespace Corals\Utility\Wishlist\Http\Controllers\API;
 
 use Corals\Foundation\Http\Controllers\APIBaseController;
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
-use Corals\Modules\Utility\Wishlist\Services\WishlistService;
+use Corals\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Services\WishlistService;
 use Illuminate\Http\Request;
 
 class WishlistBaseController extends APIBaseController

@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Providers;
+namespace Corals\Utility\Wishlist\Providers;
 
 use Corals\Foundation\Providers\BaseUpdateModuleServiceProvider;
 

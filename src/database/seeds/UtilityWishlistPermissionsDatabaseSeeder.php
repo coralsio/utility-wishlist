@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\database\seeds;
+namespace Corals\Utility\Wishlist\database\seeds;
 
 use Carbon\Carbon;
 use Corals\User\Models\Role;

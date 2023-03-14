@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Services;
+namespace Corals\Utility\Wishlist\Services;
 
 use Corals\Foundation\Services\BaseServiceClass;
-use Corals\Modules\Utility\Wishlist\Classes\WishlistManager;
+use Corals\Utility\Wishlist\Classes\WishlistManager;
 
 class WishlistService extends BaseServiceClass
 {

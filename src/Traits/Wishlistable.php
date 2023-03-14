@@ -1,8 +1,8 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Traits;
+namespace Corals\Utility\Wishlist\Traits;
 
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Models\Wishlist;
 use Illuminate\Database\Eloquent\Model;
 
 trait Wishlistable

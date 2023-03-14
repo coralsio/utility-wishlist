@@ -1,10 +1,10 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\DataTables;
+namespace Corals\Utility\Wishlist\DataTables;
 
 use Corals\Foundation\DataTables\BaseDataTable;
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
-use Corals\Modules\Utility\Wishlist\Transformers\WishlistTransformer;
+use Corals\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Transformers\WishlistTransformer;
 use Yajra\DataTables\EloquentDataTable;
 
 class WishlistDataTable extends BaseDataTable

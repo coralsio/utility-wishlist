@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Models;
+namespace Corals\Utility\Wishlist\Models;
 
 use Corals\Foundation\Models\BaseModel;
 use Corals\User\Models\User;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Traits;
+namespace Corals\Utility\Wishlist\Traits;
 
 trait WishlistCommon
 {

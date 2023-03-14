@@ -1,10 +1,10 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Providers;
+namespace Corals\Utility\Wishlist\Providers;
 
 use Corals\Foundation\Providers\BaseUninstallModuleServiceProvider;
-use Corals\Modules\Utility\Wishlist\database\migrations\CreateWishlistsTable;
-use Corals\Modules\Utility\Wishlist\database\seeds\UtilityWishlistDatabaseSeeder;
+use Corals\Utility\Wishlist\database\migrations\CreateWishlistsTable;
+use Corals\Utility\Wishlist\database\seeds\UtilityWishlistDatabaseSeeder;
 
 class UninstallModuleServiceProvider extends BaseUninstallModuleServiceProvider
 {

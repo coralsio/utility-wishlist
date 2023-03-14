@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Models\Wishlist;
 use Corals\Settings\Facades\Modules;
 use Corals\User\Models\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -45,7 +45,7 @@ class UtilityWishlistTest extends TestCase
 
                 foreach ($myClasses as $class) {
                     $traits = class_uses($class);
-                    if (array_search('Corals\\Modules\\Utility\\Wishlist\\Traits\\Wishlistable', $traits)) {
+                    if (array_search('Corals\\Utility\\Wishlist\\Traits\\Wishlistable', $traits)) {
                         $model = $class::query()->first();
                         if ($model) {
                             $response = $this->post($array['prefix'] . '/' . $model->hashed_id);

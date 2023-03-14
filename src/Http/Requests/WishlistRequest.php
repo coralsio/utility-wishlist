@@ -1,9 +1,9 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Http\Requests;
+namespace Corals\Utility\Wishlist\Http\Requests;
 
 use Corals\Foundation\Http\Requests\BaseRequest;
-use Corals\Modules\Utility\Wishlist\Models\Wishlist;
+use Corals\Utility\Wishlist\Models\Wishlist;
 
 class WishlistRequest extends BaseRequest
 {

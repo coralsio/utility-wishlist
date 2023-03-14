@@ -1,6 +1,6 @@
 <?php
 
-namespace Corals\Modules\Utility\Wishlist\Transformers;
+namespace Corals\Utility\Wishlist\Transformers;
 
 use Corals\Foundation\Transformers\FractalPresenter;
 

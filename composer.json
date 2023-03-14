@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Corals\\Modules\\Utility\\Wishlist\\": "src"
+            "Corals\\Utility\\Wishlist\\": "src"
         }
     },
     "autoload-dev": {
@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Corals\\Modules\\Utility\\Wishlist\\UtilityWishlistServiceProvider"
+                "Corals\\Utility\\Wishlist\\UtilityWishlistServiceProvider"
             ]
         }
     },
