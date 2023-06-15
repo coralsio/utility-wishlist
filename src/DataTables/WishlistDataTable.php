@@ -40,7 +40,7 @@ class WishlistDataTable extends BaseDataTable
     {
         return [
             'id' => ['visible' => false],
-            'object' => ['title' => trans('Utility::attributes.wishlist.object'), "searchable" => false, 'orderable' => false],
+            'object' => ['title' => trans('utility-wishlist::attributes.wishlist.object'), "searchable" => false, 'orderable' => false],
             'created_at' => ['title' => trans('Corals::attributes.created_at')],
         ];
     }
